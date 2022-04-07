@@ -1,0 +1,19 @@
+{"_id":"1Ccd9eD5JS70egac","key":"core.moduleConfiguration","value":"{\"lib-wrapper\":false,\"perfect-vision\":false,\"_mathjs\":true,\"monsterblock\":true,\"ddb-importer\":true,\"df-curvy-walls\":false,\"token-mold\":true,\"koboldpressogl\":true}"}
+{"key":"ddb-importer.entity-feat-compendium","value":"\"world.ddb-cities-and-sinners-feats\"","_id":"8n3cKKPUCn3GKKPH"}
+{"key":"ddb-importer.entity-class-compendium","value":"\"world.ddb-cities-and-sinners-classes\"","_id":"B4yxzkJpr8Lj9msE"}
+{"key":"ddb-importer.entity-monster-compendium","value":"\"world.ddb-cities-and-sinners-monsters\"","_id":"BaJib7U4Imqmrn1j"}
+{"key":"ddb-importer.entity-race-compendium","value":"\"world.ddb-cities-and-sinners-races\"","_id":"FEe38Vg44zPmWmpD"}
+{"key":"dnd5e.systemMigrationVersion","value":"\"1.5.6\"","_id":"IcZ3Xx8zdDJmqz7w"}
+{"key":"core.combatTrackerConfig","value":"{\"resource\":\"attributes.hp.value\",\"skipDefeated\":true}","_id":"M5OcriHUASVyaWGR"}
+{"key":"ddb-importer.dynamic-sync-user","value":"\"2pq2fbAlYCxlx7h4\"","_id":"OH6xYm0rd0jxz2D0"}
+{"key":"ddb-importer.entity-spell-compendium","value":"\"world.ddb-cities-and-sinners-spells\"","_id":"OXh1k4cjLjKfztEm"}
+{"key":"ddb-importer.entity-item-compendium","value":"\"world.ddb-cities-and-sinners-items\"","_id":"Qs0ZZtoARS8ymUCj"}
+{"_id":"UdZhiSiUDo6UqBtZ","key":"Token-Mold.everyone","value":"{\"unlinkedOnly\":true,\"name\":{\"use\":true,\"number\":{\"use\":true,\"prefix\":\" (\",\"suffix\":\")\",\"type\":\"ar\",\"range\":1},\"remove\":false,\"prefix\":{\"use\":false,\"position\":\"front\",\"table\":\"Compendium.token-mold.adjectives.BGNM2VPUyFfA5ZMJ\"},\"replace\":\"nothing\",\"options\":{\"default\":\"random\",\"attributes\":[{\"languages\":{\"\":\"random\"},\"attribute\":\"\"}],\"min\":3,\"max\":9}},\"hp\":{\"use\":true,\"toChat\":false},\"size\":{\"use\":true},\"config\":{\"use\":false,\"vision\":{\"use\":false,\"value\":true},\"displayBars\":{\"use\":false,\"value\":40},\"bar1\":{\"use\":false,\"attribute\":\"\"},\"bar2\":{\"use\":false,\"attribute\":\"\"},\"displayName\":{\"use\":false,\"value\":40},\"disposition\":{\"use\":false,\"value\":0},\"rotation\":{\"use\":false,\"min\":0,\"max\":360},\"scale\":{\"use\":false,\"min\":0.8,\"max\":1.2},\"mirrorX\":{\"use\":false},\"mirrorY\":{\"use\":false}},\"overlay\":{\"use\":false,\"attrs\":[]}}"}
+{"key":"core.time","value":"0","_id":"Zshmr0Blw4C4RT2Z"}
+{"key":"ddb-importer.entity-override-compendium","value":"\"world.ddb-cities-and-sinners-override\"","_id":"dhgR6ZEfFIsKojEv"}
+{"key":"ddb-importer.entity-trait-compendium","value":"\"world.ddb-cities-and-sinners-racial-traits\"","_id":"imO99B4HT1cWe9oT"}
+{"_id":"jn9WutvebpiSuZRO","key":"core.sheetClasses","value":"{\"Actor\":{\"npc\":\"dnd5e.ActorSheet5eNPC\"}}"}
+{"_id":"lFbSq0yqgksOMsSe","key":"core.permissions","value":"{\"BROADCAST_AUDIO\":[1,2,3,4],\"BROADCAST_VIDEO\":[1,2,3,4],\"TOKEN_CONFIGURE\":[1,2,3,4],\"JOURNAL_CREATE\":[1,2,3,4],\"NOTE_CREATE\":[1,2,3,4],\"TEMPLATE_CREATE\":[1,2,3,4],\"ACTOR_CREATE\":[3,4],\"ITEM_CREATE\":[3,4],\"TOKEN_CREATE\":[3,4],\"SHOW_CURSOR\":[1,2,3,4],\"SHOW_RULER\":[1,2,3,4],\"SETTINGS_MODIFY\":[3,4],\"WALL_DOORS\":[1,2,3,4],\"FILES_UPLOAD\":[3,4],\"DRAWING_CREATE\":[2,3,4],\"FILES_BROWSE\":[2,3,4],\"MACRO_SCRIPT\":[1,2,3,4],\"MESSAGE_WHISPER\":[1,2,3,4]}"}
+{"key":"ddb-importer.entity-feature-compendium","value":"\"world.ddb-cities-and-sinners-class-features\"","_id":"mxIHwuABi3MDF7NQ"}
+{"key":"ddb-importer.entity-table-compendium","value":"\"world.ddb-cities-and-sinners-tables\"","_id":"rTyQDkJ0lefWCs6S"}
+{"key":"core.nue.shownTips","value":"true","_id":"tdqOe32zoO1NIhJO"}

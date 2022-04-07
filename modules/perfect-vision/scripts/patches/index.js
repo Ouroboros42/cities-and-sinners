@@ -1,0 +1,1 @@
+import "./pixi/index.js";

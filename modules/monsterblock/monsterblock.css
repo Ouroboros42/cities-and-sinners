@@ -1,0 +1,1102 @@
+
+.monsterblock .window-header,
+.dnd5e.npc .window-header {
+	padding-left: 30px;
+}
+.monsterblock .window-header {
+	padding-right: 8ch;
+}
+.monsterblock .window-header a.close {
+	position: absolute;
+	right: 9px;
+	height: 30px !important;	/* Prevents other modules that might try 100% from messing this up now that it's an absolute element. */
+}
+.switches, .monsterblock {
+	--column-width: 52ch;
+}
+.monsterblock {
+	width: 100%;
+	font-size: 14px;
+	--window-padding: 8px;
+	--heading-color: rgb(89 23 13);
+	--roll-hover-color: hsl(8 70% 14% / 1);
+	--divider-color: rgba(140, 42, 42, 1);
+	--divider-color-end: rgba(140, 42, 42, 0);
+	--background-image: url(../../ui/parchment.jpg);
+	--background-filter: hsl(39deg 100% 60% / 80%);
+	--background-blend: hard-light;
+	--menu-background: #f7e2ac;
+	--main-text-color: black;
+	--inline-link-color: #ff6400;
+	--faded-text: #80808080;
+	--shadow-color: var(--main-text-color);
+	--column-gap: 3ch;
+}
+.monsterblock.dark-theme {
+	font-size: 14px;
+	color: white;
+	--heading-color: rgb(121 121 121);
+	--roll-hover-color: hsl(199deg 9% 66%);
+	--divider-color: rgb(46 68 130);
+	--background-filter: hsl(0deg 0% 0% / 87%);
+	--background-blend: darken;
+	--main-text-color: #aaa;
+	--inline-link-color: #879ba9;
+	--shadow-color: var(--divider-color);
+}
+.monsterblock.srd-theme {
+	font-size: 14px;
+	color: white;
+	--heading-color: rgb(0 0 0);
+	--roll-hover-color: #828282;
+	--divider-color: rgb(0 0 0);
+	--background-filter: white;
+	--background-blend: color;
+	--main-text-color: #000;
+	--inline-link-color: #808080;
+	--shadow-color: var(--main-text-color);
+}
+.monsterblock.system-theme {
+	font-size: 14px;
+	--heading-color: rgb(0 0 0);
+	--roll-hover-color: #828282;
+	--divider-color: rgb(0 0 0);
+	--background-filter: none;
+	--background-blend: none;
+	--main-text-color: #000;
+	--inline-link-color: #ff6400;
+	--shadow-color: var(--main-text-color);
+	--roll-hover-color: rgb(153, 26, 26);
+}
+.monsterblock.cool-theme {
+	--heading-color: rgb(0 37 93);
+	--roll-hover-color: hsl(202deg 39% 38%);
+	--divider-color: rgb(37 120 169);
+	--background-filter: hsl(180deg 100% 66% / 54%);
+	--background-blend: hard-light;
+	--main-text-color: #000000;
+	--inline-link-color: #246094;
+	--shadow-color: var(--main-text-color);
+}
+.monsterblock.hot-theme {
+	--heading-color: rgb(123 28 0);
+	--roll-hover-color: hsl(0deg 50% 37%);
+	--divider-color: rgb(86 0 0);
+	--background-filter: hsl(0deg 96% 2% / 87%);
+	--background-blend: darken;
+	--main-text-color: #a7a1a1;
+	--inline-link-color: #ab4b2e;
+	--shadow-color: var(--divider-color);
+}
+.monsterblock.foundry-theme {
+	font-size: 14px;
+	color: white;
+	--heading-color: #ff6400;
+	--roll-hover-color: #ff2000;
+	--divider-color: red;
+	--background-image: url(../../ui/denim075.png);
+	--background-filter: rgba(0,0,0,0);
+	--inline-link-color: #ff8000;
+	--shadow-color: #444;
+	--main-text-color: #d2d2d2;
+}
+
+.monsterblock * {
+	user-select: text;
+	overflow-wrap: break-word;
+}
+.monsterblock main {
+	display: block;
+	break-inside: auto;
+	position: relative;
+}
+.monsterblock .hidden {
+	display: none;
+}
+.monsterblock a[href] {
+	color: var(--inline-link-color);
+}
+.monsterblock a[href]:hover {
+	text-shadow: 0 0 8px var(--inline-link-color);
+}
+.monsterblock .window-content {
+	padding: var(--window-padding);
+	background: var(--background-image), var(--background-filter);
+	background-repeat: repeat;
+	background-blend-mode: var(--background-blend);
+	color: var(--main-text-color);
+	background-position: 0px 130px;
+	display: block;
+}
+.window-app .switches {
+	/* background: red; */
+	width: 29px;
+	padding-left: 6px;
+	height: 24px;
+	position: absolute;
+	top: 7px;
+	left: 2px;
+	color: #aaa;
+}
+.window-app.dnd5e .switches {
+	--background-image: url(../../ui/parchment.jpg);
+	--background-filter: rgba(0, 0, 0, 0);
+	--background-blend: none;
+	--heading-color: black;
+	--divider-color: gray;
+}
+.window-app .switches a {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.window-app .switches a.nochild {
+	width: initial;
+}
+.window-app .switches ul {
+	margin: 0;
+	top: 0;
+	display: none;
+	position: absolute;
+	background: var(--background-image), var(--background-filter);
+	background-repeat: repeat;
+	background-blend-mode: var(--background-blend);
+	color: var(--heading-color);
+	padding: 0;
+	left: 100%;
+	z-index: 100;
+	box-shadow: -1px 1px 5px 0px var(--shadow-color);
+}
+.window-app .switches > ul {
+	margin-top: 6px;
+	margin-left: -8px;
+	top: unset;
+	left: unset;
+	position: fixed;
+	flex-direction: column;
+}
+.window-app .switches:hover > ul {
+	display: flex;
+}
+.window-app .switches li a:not(:only-child):after {
+	display: block;
+	content: '>';
+	position: absolute;
+	right: .2em;
+	top: 0;
+}
+.window-app .switches li a.nochild:not(:only-child):after {
+	content: "";
+}
+.window-app .switches li:hover > ul {
+	display: block;
+}
+.window-app .switches li {
+	margin: 0;
+	width: calc(var(--column-width) / 2);
+	position: relative;
+	display: inline-block;
+	padding: 2px;
+	padding-right: 14px;
+	padding-left: 8px;
+	border-left: 3px solid var(--divider-color);
+	border-bottom: 1px dashed gray;
+}
+
+.monsterblock .switches .selected:after {
+	content: " \2713";
+	font-size: .7em;
+	font-weight: bold;
+}
+.monsterblock .switches .switch-input {
+	width: 60%;
+}
+.monsterblock .inline-secrets .secret {
+	display: inline;
+	border: none;
+	background: none;
+	padding: 0;
+}
+.monsterblock .hidden-secrets .secret {
+	display: none;
+}
+.monsterblock a.inline-roll .fa-dice-d20 {
+	display: inline;
+	color: var(--main-text-color);
+}
+.monsterblock a.inline-roll {
+	border: none;
+	background: none;
+	padding: 0;
+}
+.monsterblock .inline-secrets
+.secret > :first-child {
+	display: inline;
+}
+
+.monsterblock input.hp-input {
+	width: 4ch;
+	height: 1em;
+	padding: 0;
+}
+.monsterblock .ability:hover, 
+.monsterblock .saving-throw:hover, 
+.monsterblock .skill:hover, 
+.monsterblock .item-name:hover, 
+.monsterblock .spell:hover, 
+.monsterblock a.inline-roll:hover, 
+.monsterblock [data-roll-formula]:hover, 
+.monsterblock .window-content a:hover, 
+.monsterblock .tweak-menu ul label:hover,
+.monsterblock .menu .menu-toggle:hover {
+	text-shadow: 0px 0px .05em var(--roll-hover-color);
+	cursor: pointer;
+	color: var(--roll-hover-color);
+}
+
+.monsterblock .hover-only,
+.monsterblock .hover-only.select-field {
+	display: none;
+}
+.monsterblock *:hover > .hover-only {
+	display: initial;
+}
+.monsterblock *:hover > .hover-only.select-field {
+	display: inline-block;
+}
+.monsterblock .nocaps {
+	text-transform: lowercase;
+}
+.monsterblock .no-break {
+	white-space: nowrap;
+}
+.monsterblock .toggle-button {
+	/* display: inline-block; */
+	/* width: 20px; */
+	/* height: 20px; */
+	/* border: 1px solid red; */
+	text-indent: initial;
+	cursor: pointer;
+}
+
+.monsterblock .flexcol {
+    display: block;
+    height: 100%;
+    /* width: var(--column-width); */
+    column-width: var(--column-width);
+    column-gap: var(--column-gap);
+    column-fill: balance;
+    /* border: 1px solid red; */
+}
+
+.monsterblock .monster-attributes2 {
+	position: relative;
+}
+.monsterblock .no-caps {
+	text-transform: lowercase;
+}
+.monsterblock .sheet-header {
+	display: block;
+	position: relative;
+}
+.monsterblock .sheet-header section:not(:first-of-type), .monsterblock main {
+	margin-top: .5em;
+}
+.monsterblock .sheet-header section:not(:first-of-type)::before,
+.monsterblock main::before {
+	margin-bottom: .5em;
+	display: block;
+	content: "";
+	border: none;
+	border-top: .2em solid transparent;
+	border-bottom: .2em solid transparent;
+	border-left: var(--column-width) solid var(--divider-color);
+	--mask-image: linear-gradient(to right, black 30%, #000000b8 80%, transparent);
+	-webkit-mask-image: var(--mask-image);
+	mask-image: var(--mask-image);
+}
+.monsterblock .editing main.bio-box:hover::before {
+	border-left: var(--column-width) solid var(--divider-color);
+}
+.monsterblock .editing .sheet-header section.monster-attributes2:hover::before,
+.monsterblock .editing .sheet-header section.monster-attributes2.menu-active::before,
+.monsterblock .editing main:hover::before,
+.monsterblock .editing main.menu-active::before {
+	border-left: calc(var(--column-width) - 2.5ch) solid var(--divider-color);
+}
+.monsterblock .tweak-menu {
+	display: block;
+	width: 1em;
+	height: 1em;
+	position: absolute;
+	right: 0.2em;
+	top: -0.4em;
+	margin: 0;
+	text-align: center;
+	visibility: hidden;
+	cursor: pointer;
+}
+.monsterblock .simple-menu {
+	display: inline;
+	margin: 0;
+}
+.monsterblock .menu .overflow-fix {
+	position: fixed;
+	margin: 0;
+	z-index: 10;
+}
+.monsterblock .tweak-menu > label {
+	color: var(--divider-color);
+}
+.monsterblock .tweak-menu .overflow-fix > ul > li {
+	padding-left: 2ch;
+}
+.monsterblock .tweak-menu li > ul {
+	right: 100%;
+	top: calc(-.5em - 66px);
+	top: 0px;
+	transform: translateY(-40%);
+}
+
+.monsterblock .tweak-menu ul {
+	padding: 0;
+	box-shadow: 1px 1px 5px 0px var(--shadow-color);
+	width: calc(var(--column-width) / 2);
+	color: var(--heading-color);
+}
+.monsterblock .tweak-menu .overflow-fix > ul {
+	right: -8px;
+	top: -.4em;
+}
+.monsterblock .tweak-menu li {
+	position: relative;
+	margin: 0;
+	width: calc(var(--column-width) / 2);
+	position: relative;
+	display: inline-block;
+	padding: 2px;
+	padding-left: 2ch;
+	padding-right: 1ch;
+	border-right: 3px solid var(--divider-color);
+	border-bottom: 1px dashed gray;
+}
+.monsterblock .menu label,
+.monsterblock .menu h4 {
+	cursor: pointer;
+	user-select: none;
+}
+.monsterblock .menu label {
+	display: inline-block;
+	width: 100%;
+}
+.monsterblock .tweak-menu li label:not(:only-child):before {
+	display: block;
+	position: absolute;
+	left: .2em;
+	content: '<';
+	top: 1px;
+}
+.monsterblock .tweak-menu li.custom-trait {
+	padding: 4px;
+}
+.monsterblock .custom-trait input {
+	width: 100%;
+	color: var(--main-text-color);
+}
+.monsterblock .custom-trait .trait-sel-label {
+	font-size: .8em;
+}
+.monsterblock .tweak-menu .custom-trait > label:hover {
+	color: currentColor;
+	text-shadow: none;
+}
+.monsterblock .tweak-menu.menu-open > label,
+.monsterblock .menu.menu-open .overflow-fix > ul,
+.monsterblock .menu li.menu-open > ul {
+	visibility: visible;
+}
+.monsterblock .menu-open > label {
+	font-weight: bold;
+}
+.monsterblock .menu li a {
+	display: inline-block;
+	width: 100%;
+}
+.monsterblock main:hover .tweak-menu,
+.monsterblock .monster-attributes2:hover .tweak-menu {
+	visibility: visible;
+}
+
+.monsterblock .delete-item {
+	/* display: none; */
+	visibility: hidden;
+	font-size: .75em;
+	position: fixed;
+	/* border: red 1px solid; */
+	/* width: 3em; */
+	/* height: 2em; */
+	padding-right: 5px;
+}
+.monsterblock .delete-item:before {
+	position: absolute;
+	width: 2em;
+	height: 2em;
+	/* border: 1px solid green; */
+	content: ' ';
+	left: -2em;
+	top: -2px;
+}
+.monsterblock .delete-item i {
+	background: var(--background-image), var(--background-filter);
+	background-repeat: repeat;
+	background-blend-mode: var(--background-blend);
+	box-shadow: 0px 0px 5px 0px var(
+	--shadow-color);
+	width: 1.5em;
+	position: absolute;
+	left: -20px;
+	top: 1px;
+	height: 1.5em;
+	text-align: center;
+	padding-top: .25em;
+	border-radius: .75em;
+	text-indent: 0;
+}
+.monsterblock *:hover > .delete-item {
+	visibility: visible;
+	/* display: inline; */
+}
+.monsterblock .skill-ability {
+	text-transform: capitalize;
+	text-align: center;
+	color: var(--main-text-color);
+	justify-self: start;
+	flex: 3.5ch;
+}
+
+.monsterblock .proficiency-toggle {
+	display: flex;
+	flex-direction: row;
+	gap: .75ch;
+}
+
+.monsterblock .proficiency-toggle .config-button {
+	flex: 1em;
+}
+.monsterblock .proficiency-toggle .skill-label {
+	flex: 100%;
+	flex-grow: 1;
+	white-space: nowrap;
+}
+
+.monsterblock .menu-item-icon {
+	position: relative;
+	display: inline-block;
+	width: 3.5ch;
+	top: 1px;
+}
+.monsterblock .charname {
+	font-size: 2em;
+	color: var(--heading-color);
+	font-family: serif;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+.monsterblock .chartype {
+	font-style: italic;
+	margin: 0;
+	text-transform: capitalize;
+}
+.monsterblock .chartype .select-field {
+	text-transform: capitalize;
+}
+.monsterblock .image-enabled .charname,
+.monsterblock .image-enabled .chartype,
+.monsterblock .image-enabled .monster-attributes1 .attributes {
+	width: 65%;
+}
+.monsterblock .profile-image {
+	border: none;
+	position: absolute;
+	height: 17ch;
+	width: 17ch;
+	right: 0;
+	top: 0;
+	margin: 0;
+	cursor: pointer;
+	z-index: 1;
+}
+.monsterblock header .profile-image img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+	border: none;
+	margin-right: 0;
+}
+.monsterblock.compact-layout .profile-image:hover,
+.monsterblock .profile-image:hover {
+	width: calc(var(--column-width) * 0.7);
+	height: calc(var(--column-width) * 0.7);
+	z-index: 75;
+}
+
+.monsterblock .ac-type {
+	text-transform: lowercase;
+}
+
+.monsterblock .paren {
+	font-size: .88em;
+}
+
+.monsterblock .attributes, .monsterblock .ability-scores {
+	list-style: none;
+	color: var(--heading-color);
+	padding: 0;
+	margin: 0;
+}
+
+.monsterblock .ability-scores .ability {
+	text-align: center;
+	position: relative;
+}
+.monsterblock .ability-scores .ability .config-button {
+	position: absolute;
+	right: 0;
+	top: .25em;
+	font-size: .75em;
+}
+.monsterblock .ability-scores .ability .config-button:hover {
+	text-shadow: 0 0 1px var(--shadow-color);
+}
+.monsterblock .attributes .attribute {
+	margin: 0;
+	padding-left: 2ch;
+	text-indent: -2ch;
+	position: relative;
+}
+.monsterblock .monster-attributes2 .attributes .attribute:last-of-type {
+	display: flex;
+	justify-content: space-between;
+}
+.monsterblock .attributes .attribute .prof-bonus {
+	margin-right: 2ch;
+}
+.monsterblock .attributes .attribute .select-field {
+	text-indent: initial;
+}
+.monsterblock .attribute-name {
+	display: inline;
+	font-weight: bold;
+}
+.monsterblock .ability-title {
+	display: block;
+	font-weight: bold;
+	margin: 0;
+	text-transform: uppercase;
+}
+.monsterblock .monster-saves .ability-title {
+	display: inline;
+	font-weight: normal;
+	margin: 0;
+	text-transform: capitalize;
+}
+
+.monsterblock input {
+	border: none;
+}
+.monsterblock .inline-list {
+	display: inline;
+	list-style: none;
+	padding: 0;
+}
+.monsterblock .inline-list li {
+	display: inline;
+}
+.monsterblock .inline-list li:after {
+    content: var(--list-seperator) ' ';
+    text-shadow: none;
+	color: var(--main-text-color);
+}
+.monsterblock header .inline-list li:after {
+	color: var(--heading-color);
+}
+
+.monsterblock .inline-list li:last-of-type:after {
+    content: '';
+}
+.monsterblock .spell-list {
+	list-style: none;
+	margin-top: 1em;
+	padding: 0;
+	padding-left: 2ch;
+	text-indent: -2ch;
+}
+.monsterblock .at-will-spells {
+	display: inline;
+	list-style: none;
+	padding: 0;
+}
+.monsterblock .at-will-spells li {
+	display: inline;
+}
+.monsterblock .at-will-spells li:after {
+	content: var(--list-seperator) ' ';
+	text-shadow: none;
+	color: var(--main-text-color);
+}
+.monsterblock .at-will-spells 
+li:not(:first-of-type):nth-last-of-type(2):after {
+	content: var(--list-seperator) ' ' var(--list-conjuntion) ' ';
+}
+.monsterblock .at-will-spells 
+li:nth-last-of-type(2):after {
+	content: ' ' var(--list-conjuntion) '  ';
+}
+.monsterblock .at-will-spells li:last-of-type:after {
+	content: '';
+}
+.monsterblock .spell-name {
+	font-style: italic;
+}
+.monsterblock .monster-saves .ability {
+	display: inline;
+}
+.monsterblock .section-header {
+	break-before: auto;
+	break-after: avoid;
+	break-inside: avoid;
+	margin-top: 0.5em;
+	margin-bottom: -.4em;
+	line-height: 1em;
+	font-size: 1.5em;
+	color: var(--heading-color);
+	font-variant: small-caps;
+	border-bottom: 1px solid var(--heading-color);
+}
+.monsterblock .item {
+	margin-top: 1em;
+	/* display: inline-flex; */
+}
+.monsterblock .item-name,
+.monsterblock .name-extension {
+	font-weight: bold;
+	font-style: italic;
+}
+.monsterblock .spell .name-extension {
+	font-weight: initial;
+}
+.monsterblock .legendary-actions .feature-description {
+	padding-left: 2ch;
+	text-indent: -2ch;
+}
+.monsterblock .legendary-actions .item-name,
+.monsterblock .legendary-actions .name-extension {
+	font-weight: bold;
+	font-style: normal;
+}
+.monsterblock .legendary-actions,
+.monsterblock .lair-actions {
+	margin: 0;
+}
+.monsterblock .legendary-description {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.monsterblock .lair-description {
+	margin-top: 1em;
+}
+
+.monsterblock .attack-type {
+	font-style: italic;
+}
+.monsterblock .hit-label {
+	font-style: italic;
+}
+.monsterblock .inline-children 
+.description p:first-of-type,
+.monsterblock .inline-children 
+.description div:first-of-type:not(.select-field) {
+	display: inline;
+}
+.monsterblock .description {
+	line-height: 1.3em;
+}
+
+.monsterblock *:hover > [contenteditable=true]:empty::after,
+.monsterblock *:hover > .editable-wrapper > [contenteditable=true]:empty::after,
+.monsterblock [contenteditable=true]:focus:empty::after {
+	text-shadow: none;
+	content: attr(placeholder);
+	color: var(--faded-text);
+}
+.monsterblock .optional-comma:not(:empty):before {
+	content: var(--list-seperator) ' ';
+}
+.monsterblock .editing *:hover > .optional-comma:empty:before {
+	content: var(--list-seperator) ' ';
+	color: var(--faded-text);
+}
+.monsterblock .optional-space:not(:empty):before,
+.monsterblock .editing *:hover > .optional-space:empty:before {
+	content: '\00a0';
+}
+.monsterblock [contenteditable=true]:empty {
+	display: inline-block;
+	text-indent: 0;
+	/* line-height: 1.1em; */
+	height: .9em;
+}
+.monsterblock [contenteditable=true]:active,
+.monsterblock [contenteditable=true]:focus, 
+.monsterblock [contenteditable=true]:hover {
+	outline: none;
+	text-decoration: dotted underline;
+}
+.monsterblock .select-field:hover .select-label,
+.monsterblock .select-list li:hover {
+	text-decoration: dotted underline;
+}
+
+.monsterblock .select-field {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+.monsterblock .select-label {
+	cursor: pointer;
+}
+.monsterblock .select-list,
+.monsterblock .hover-list,
+.monsterblock .simple-menu ul {
+	padding-left: .3em;
+	padding-right: .4em;
+	box-shadow: 0px 0px 1px 0px var(--shadow-color);
+}
+.monsterblock .select-list,
+.monsterblock .hover-list,
+.monsterblock .menu ul {
+	visibility: hidden;
+	display: block;
+	position: absolute;
+	list-style: none;
+	background: var(--background-image), var(--background-filter);
+	background-repeat: repeat;
+	background-blend-mode: var(--background-blend);
+	z-index: 1;
+}
+.monsterblock .menu ul {
+	text-align: left;
+}
+.monsterblock .select-list {
+	position: fixed;
+	margin-top: 0;
+	margin-left: -.5ch;
+}
+.monsterblock .select-list li {
+	cursor: pointer;
+}
+.monsterblock .select-field:hover .select-list {
+	visibility: visible;
+}
+
+.monsterblock .config-button {
+	display: none;
+}
+.monsterblock .attribute .config-button {
+	padding-left: 2ch;
+}
+.monsterblock *:hover > .config-button {
+	display: inline;
+}
+
+.monsterblock .editor {
+	height: 100%;
+}
+.monsterblock .bio-box h2 {
+	margin-top: 2.5em;
+}
+.monsterblock .biography {
+	margin-top: 2em;
+	--min-height: 30em;
+	max-height: var(--column-width);
+	margin-top: .5em;
+	height: fit-content;
+	min-height: var(--min-height);
+	overflow-y: auto;
+	align-content: flex-start;
+	display: block;
+	break-inside: auto;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+.monsterblock .biography .editor-content {
+	min-height: var(--min-height);
+}
+.monsterblock .biography .tox-tbtn--select.tox-tbtn--bespoke {
+	font-size: .7em;
+	width: 10ch;
+}
+.monsterblock .biography .editor-content img {
+	cursor: pointer;
+}
+.monsterblock .header-resource {
+	float: right;
+	font-size: .7em;
+}
+.monsterblock .hover-list,
+.monsterblock .simple-menu ul {
+	text-indent: 0;
+	width: fit-content;
+	top: -7px;
+	left: -1.3em;
+	white-space: nowrap;
+}
+.monsterblock *:hover > .position-wrapper > .hover-list {
+	visibility: visible;
+}
+.monsterblock .position-wrapper {
+	width: 0px;
+	height: 0px;
+	position: fixed;
+	margin: 0;
+	z-index: 1;
+}
+
+/* Mini Blocks */
+
+.monsterblock.compact-layout,
+.grid-cell .monsterblock .switches > i,
+.monsterblock.compact-window .switches > i {
+	visibility: hidden;
+}
+.monsterblock.compact-layout,
+.grid-cell .monsterblock .switches:hover i,
+.monsterblock.compact-window .switches:hover > i {
+	visibility: visible;
+}
+.monsterblock.compact-window {
+	overflow: hidden;
+	border-radius: 1em;
+}
+.monsterblock.compact-window .window-header {
+	width: 100%;
+	position: absolute;
+	height: 1.5em;
+	border: none;
+	color: var(--main-text-color);
+	padding-top: .3em;
+	line-height: 1em;
+	padding-right: 1.5ch;
+	z-index: 2;
+}
+.monsterblock.compact-window.minimized .window-header {
+	height: 100%;
+	font-size: 1.25em;
+	padding-top: .55em;
+	color: white;
+}
+.monsterblock.compact-window .window-header * {
+	visibility: hidden;
+}
+.monsterblock.compact-window .window-header:hover *,
+.monsterblock.compact-window.minimized .window-header * {
+	visibility: visible;
+}
+.grid-cell .monsterblock .switches,
+.monsterblock.compact-window .switches {
+	top: 4px;
+	left: 0px;
+	width: calc(var(--column-width) / 2);
+	height: 1.5em;
+	z-index: 3;
+}
+.grid-cell .monsterblock .switches > ul,
+.monsterblock.compact-window .switches > ul {
+	margin-top: 2px;
+	margin-left: -4px;
+}
+.monsterblock.compact-window .window-header .window-title {
+	visibility: hidden;
+}
+.monsterblock.compact-window .window-header a {
+	font-size: 0px;
+}
+.monsterblock.compact-window .window-header a:hover {
+	text-shadow: 0px 0px 1px var(--roll-hover-color);
+}
+.monsterblock.compact-window .window-header a > i {
+	font-size: 12px; 
+}
+.monsterblock.compact-window .window-header .header-button.close {
+	position: initial;
+	right: initial;
+	height: initial;
+}
+
+.monsterblock.compact-window.minimized .window-header .window-title {
+	visibility: visible;
+}
+
+.monsterblock.compact-window .window-content {
+	cursor: text;
+	/* padding-top: 0.5em; */
+	box-shadow: inset 0px 0px 4px 4px #00000038;
+}
+
+.monsterblock.compact-layout .charname {
+	line-height: 1em;
+}
+.monsterblock.compact-layout .profile-image {
+	height: 14ch;
+	width: 14ch;
+}
+.monsterblock.compact-layout .image-enabled .charname,
+.monsterblock.compact-layout .image-enabled .chartype,
+.monsterblock.compact-layout .image-enabled .monster-attributes1 .attributes {
+	width: 72%;
+}
+
+.monsterblock.compact-layout .sheet-header section:before {
+	margin-bottom: .3em;
+}
+
+.monsterblock.compact-layout .sheet-header section {
+	margin-top: .3em;
+}
+.monsterblock.compact-layout .sheet-header .monster-identity {
+	margin-top: 0em;
+}
+
+.monsterblock.compact-layout .monster-attributes1,
+.monsterblock.compact-layout .monster-abilities,
+.monsterblock.compact-layout .monster-attributes2 {
+	line-height: 1.1em;
+}
+
+.monsterblock.compact-layout .attribute {
+	height: 1.1em;
+	width: var(--column-width);
+	position: relative;
+}
+
+.monsterblock.compact-layout .monster-attributes2 .attributes .attribute:last-of-type {
+	display: block;
+}
+
+.monsterblock.compact-layout .attribute .attribute-wrapper {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: var(--column-width);
+	height: 1.1em;
+	position: absolute;
+	padding-left: 2ch;
+}
+.monsterblock.compact-layout .attribute .attribute-wrapper.prof-bonus {
+	right: -18em;
+}
+.monsterblock.compact-layout .attribute:hover .attribute-wrapper {
+	white-space: normal;
+	overflow: visible;
+	background: var(--background-image), var(--background-filter);
+	background-repeat: repeat;
+	background-blend-mode: var(--background-blend);
+	z-index: 1;
+	height: auto;
+}
+
+.monsterblock.compact-layout .section-header {
+	margin-bottom: -.1em;
+}
+.monsterblock.compact-layout .item {
+	margin-top: .2em;
+}
+.monsterblock.compact-feats .item {
+	cursor: pointer;
+}
+.monsterblock.compact-feats .item.compact {
+	position: relative;
+	height: 2.6em;
+}
+.monsterblock.compact-feats .compact .feature-description,
+.monsterblock.compact-feats .compact .attack-description {
+	height: 2.6em; /* Line height is 1.3em */
+	overflow: hidden;
+	position: absolute;
+	width: var(--column-width);
+	--mask-image: linear-gradient(to bottom, black 1.3em, transparent 2.4em);
+	-webkit-mask-image: var(--mask-image);
+	mask-image: var(--mask-image);
+	transition: box-shadow .2s;
+}
+.monsterblock.compact-feats .item:hover .feature-description,
+.monsterblock.compact-feats .item:hover .attack-description {
+	box-shadow: 0 0 2px 1px #00000030;
+}
+.monsterblock.compact-feats .item.compact:hover .feature-description,
+.monsterblock.compact-feats .item.compact:hover .attack-description {
+	height: auto;
+	background: var(--background-image), var(--background-filter);
+	background-repeat: repeat;
+	background-blend-mode: var(--background-blend);
+	-webkit-mask-image: none;
+	mask-image: none;
+	position: fixed;
+	z-index: 1;
+	box-shadow: 0px 3px 2px 2px #00000030;
+	padding: 1ch;
+	width: calc(var(--column-width) + 2ch);
+	margin-left: -1ch;
+	margin-top: -1ch;
+	border-radius: 0 0 .2em .2em;
+}
+.monsterblock.compact-feats .item.compact.legendary-actions:hover .feature-description {
+	padding-left: 3ch;
+}
+.monsterblock.compact-feats .item.compact:before {
+	display: block;
+	position: relative;
+}
+
+/* GM Screen By Calego#0914 Compatability */
+
+.gm-screen-grid-cell .monsterblock {
+	--background-filter: none;
+}
+
+.gm-screen-grid-cell .monsterblock .flexcol {
+	--column-width: calc(var(--grid-cell-width) - 8px);
+	column-width: unset;
+	column-count: var(--column-span-count);
+	height: unset;
+}
+
+.gm-screen-grid-cell .monsterblock header .profile-image img {
+	margin-right: 0px;
+}
+
+.gm-screen-grid-cell .monsterblock.compact-feats .compact .feature-description,
+.gm-screen-grid-cell .monsterblock.compact-feats .compact .attack-description {
+	position: absolute;
+	width: inherit;
+}
+.gm-screen-grid-cell .monsterblock.compact-feats .item.compact:hover .feature-description,
+.gm-screen-grid-cell .monsterblock.compact-feats .item.compact:hover .attack-description {
+	padding: 0;
+	width: calc(var(--grid-cell-width) - 1ch);
+	margin-left: 0;
+	margin-top: 0;
+}
+.gm-screen-grid-cell .monsterblock.compact-feats .item.compact.legendary-actions:hover .feature-description {
+	padding-left: 2ch;
+}
+
+.monsterblock .flavor-text:empty {
+	display: none;
+}
+.monsterblock .flavor-text {
+	font-style: italic;
+}
+.monsterblock .flavor-text > p {
+	padding: 0 1ch;
+}

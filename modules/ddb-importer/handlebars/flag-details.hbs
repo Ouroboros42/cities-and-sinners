@@ -1,0 +1,16 @@
+<form>
+  <header class="sheet-header">
+    <h1 class="item-title">{{name}}</h1>
+  </header>
+
+  <div class="ddb-importer-flags">
+    {{#each flags}}
+    <h2 class="ddb-importer-flags">data.flags.{{@key}}:</h2>
+    {{#each this}}
+    <div class="ddb-importer-flags">
+      <li class="ddb-importer-flags">{{this.key}}: {{this.value}}</li>
+    </div>
+    {{/each}}
+    {{/each}}
+  </div>
+</form>

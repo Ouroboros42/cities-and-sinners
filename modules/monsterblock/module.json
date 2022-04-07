@@ -1,0 +1,73 @@
+{
+    "name": "monsterblock",
+    "title": "Monster Blocks",
+    "description": "An NPC sheet designed to emulate standard 5e monster stat blocks as faithfully as possible.",
+    "author": "zeel",
+    "authors": [
+        {
+            "name": "zeel",
+            "email": "zeel02@gmail.com",
+            "url": "https://github.com/zeel01",
+            "discord": "zeel#4200"
+        }
+    ],
+    "version": "3.2.4",
+    "minimumCoreVersion": "0.8.8",
+    "compatibleCoreVersion": "9",
+    "system": [
+        "dnd5e"
+    ],
+    "minimumSystemVersion": "1.5.0",
+    "esmodules": [
+        "monsterblock.js"
+    ],
+    "styles": [
+        "monsterblock.css"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        },
+        {
+            "lang": "ja",
+            "name": "日本語",
+            "path": "lang/ja.json"
+        },
+        {
+            "lang": "fr",
+            "name": "Français",
+            "path": "lang/fr.json"
+        },
+        {
+            "lang": "pt-BR",
+            "name": "Português (Brasil)",
+            "path": "lang/pt-BR.json"
+        }
+    ],
+    "dependencies": [
+        {
+            "name": "_mathjs",
+            "type": "module",
+            "manifest": "https://raw.githubusercontent.com/League-of-Foundry-Developers/mathjs-lib/master/module.json"
+        }
+    ],
+    "manifest": "https://github.com/zeel01/MonsterBlocks/releases/latest/download/module.json",
+    "url": "https://github.com/zeel01/MonsterBlocks",
+    "download": "https://github.com/zeel01/MonsterBlocks/releases/download/v3.2.4/monsterblock.zip",
+    "readme": "https://github.com/zeel01/MonsterBlocks/blob/master/readme.md",
+    "bugs": "https://github.com/zeel01/MonsterBlocks/issues",
+    "allowBugReporter": true,
+    "changelog": "https://github.com/zeel01/MonsterBlocks/releases",
+    "media": [
+        {
+            "type": "cover",
+            "url": "https://raw.githubusercontent.com/zeel01/MonsterBlocks/master/examples/ancientRedDragon_5.png"
+        },
+        {
+            "type": "icon",
+            "url": "https://avatars2.githubusercontent.com/u/1721836"
+        }
+    ]
+}

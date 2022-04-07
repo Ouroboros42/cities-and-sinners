@@ -1,0 +1,86 @@
+{{! Attributes Menu }}
+	{{#if flags.editing}}
+		{{> "modules/monsterblock/templates/dnd5e/parts/menuItem.hbs" item=menus.attributes}}
+	{{/if}}
+
+<ul class="attributes">
+
+{{! Saves }}
+	{{#if (or info.hasSaveProfs flags.show-not-prof flags.show-skill-save)}}
+		<li class="monster-saves attribute">
+			<span class="attribute-wrapper">
+				{{> "modules/monsterblock/templates/dnd5e/parts/header/attributes/saves.hbs"}}
+			</span>
+		</li>
+	{{/if}}
+
+{{! Skills }}
+	{{#if (or info.hasSkills flags.show-not-prof flags.show-skill-save)}}
+		<li class="monster-skills attribute">
+			<span class="attribute-wrapper">
+				{{> "modules/monsterblock/templates/dnd5e/parts/header/attributes/skills.hbs"}}
+			</span>
+		</li>
+	{{/if}}
+
+{{! Damage & Condition Resistances & Immunities}}
+	{{> "modules/monsterblock/templates/dnd5e/parts/header/attributes/damage.hbs"
+		damage=data.traits.dv.selected
+		label="DND5E.DamVuln" 
+	}}
+
+	{{> "modules/monsterblock/templates/dnd5e/parts/header/attributes/damage.hbs"
+		damage=data.traits.dr.selected
+		label="DND5E.DamRes" 
+	}}
+
+	{{> "modules/monsterblock/templates/dnd5e/parts/header/attributes/damage.hbs"
+		damage=data.traits.di.selected
+		label="DND5E.DamImm" 
+	}}
+
+	{{> "modules/monsterblock/templates/dnd5e/parts/header/attributes/damage.hbs"
+		damage=data.traits.ci.selected
+		label="DND5E.ConImm" 
+	}}
+
+{{! Senses }}
+	<li class="attribute">
+		<span class="attribute-wrapper">
+			{{> "modules/monsterblock/templates/dnd5e/parts/header/attributes/senses.hbs"}}
+		</span>
+	</li>
+
+{{! Languges }}
+	<li class="attribute">
+		<span class="attribute-wrapper">
+			<h4 class="attribute-name">{{localize "DND5E.Languages"}}</h4>
+			<ul class="traits-list inline-list">
+			{{#if (moblok-hascontents data.traits.languages.selected)}}
+				{{#each data.traits.languages.selected as |v k|}}
+					<li class="trait-value">{{v}}</li>
+				{{/each}}
+			{{else}}
+				<li class="trait-value">&mdash;</li>
+			{{/if}}
+			</ul>
+		</span>
+	</li>
+
+{{! Challenge Rating }}
+	<li class="attribute">
+		<span class="attribute-wrapper">
+			<h4 class="attribute-name">{{localize "MOBLOKS5E.Challenge"}}</h4>
+			<span class="trait-value"
+				placeholder="0"
+				contenteditable="{{flags.editing}}"
+				data-dtype="Number"
+				data-field-key="data.details.cr"
+				>{{labels.cr}}</span> <span>({{ localize "MOBLOKS5E.XPLabel" xp=data.details.xp.label }})</span>
+		</span>
+		<span class="attribute-wrapper prof-bonus">
+			<h4 class="attribute-name">{{localize "MOBLOKS5E.ProfBonus"}}</h4>
+			<span class="trait-value">{{labels.proficiency}}</span>
+		</span>
+	</li>
+</ul>

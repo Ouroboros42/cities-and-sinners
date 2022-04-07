@@ -1,0 +1,45 @@
+{
+  "name": "koboldpressogl",
+  "title": "Kobold Press OGL Compendium",
+  "description": "Content from kpogl.wikidot.com converted automatically",
+  "author": "Deuce",
+  "authors": [],
+  "flags": {},
+  "version": "0.26",
+  "minimumCoreVersion": "0.4.4",
+  "compatibleCoreVersion": "0.8.8",
+  "scripts": [],
+  "esmodules": [],
+  "styles": [],
+  "languages": [],
+  "packs": [
+    {
+      "name": "koboldpressmonsters",
+      "label": "OGL Kobold Press Monsters",
+      "system": "dnd5e",
+      "path": "packs/KPmonsters.db",
+      "entity": "Actor",
+      "type": "Actor",
+      "private": false
+    },
+    {
+      "name": "koboldpressspells",
+      "label": "OGL Kobold Press Spells",
+      "system": "dnd5e",
+      "path": "packs/KPspells.db",
+      "entity": "Item",
+      "type": "Item",
+      "private": false
+    }
+  ],
+  "system": [
+    "dnd5e"
+  ],
+  "dependencies": [],
+  "socket": false,
+  "manifest": "http://kpogl.wdfiles.com/local--files/home:home/module.json",
+  "download": "http://kpogl.wdfiles.com/local--files/home:home/koboldpressogl.zip",
+  "protected": false,
+  "coreTranslation": false,
+  "library": false
+}

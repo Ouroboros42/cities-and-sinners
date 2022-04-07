@@ -1,0 +1,133 @@
+{
+  "name": "cities-and-sinners",
+  "title": "Cities & Sinners",
+  "description": "",
+  "authors": [],
+  "flags": {},
+  "version": "1.0.0",
+  "scripts": [],
+  "esmodules": [],
+  "styles": [],
+  "languages": [],
+  "packs": [
+    {
+      "label": "DDB Spells",
+      "name": "ddb-cities-and-sinners-spells",
+      "package": "world",
+      "type": "Item",
+      "path": "packs/ddb-cities-and-sinners-spells.db",
+      "system": "dnd5e",
+      "entity": "Item",
+      "private": false,
+      "absPath": "C:\\Users\\lucas\\AppData\\Local\\FoundryVTT\\Data\\worlds\\cities-and-sinners\\packs\\ddb-cities-and-sinners-spells.db"
+    },
+    {
+      "label": "DDB Items",
+      "name": "ddb-cities-and-sinners-items",
+      "package": "world",
+      "type": "Item",
+      "path": "packs/ddb-cities-and-sinners-items.db",
+      "system": "dnd5e",
+      "entity": "Item",
+      "private": false,
+      "absPath": "C:\\Users\\lucas\\AppData\\Local\\FoundryVTT\\Data\\worlds\\cities-and-sinners\\packs\\ddb-cities-and-sinners-items.db"
+    },
+    {
+      "label": "DDB Monsters",
+      "name": "ddb-cities-and-sinners-monsters",
+      "package": "world",
+      "type": "Actor",
+      "path": "packs/ddb-cities-and-sinners-monsters.db",
+      "system": "dnd5e",
+      "entity": "Actor",
+      "private": false,
+      "absPath": "C:\\Users\\lucas\\AppData\\Local\\FoundryVTT\\Data\\worlds\\cities-and-sinners\\packs\\ddb-cities-and-sinners-monsters.db"
+    },
+    {
+      "label": "DDB Feats",
+      "name": "ddb-cities-and-sinners-feats",
+      "package": "world",
+      "type": "Item",
+      "path": "packs/ddb-cities-and-sinners-feats.db",
+      "system": "dnd5e",
+      "entity": "Item",
+      "private": false,
+      "absPath": "C:\\Users\\lucas\\AppData\\Local\\FoundryVTT\\Data\\worlds\\cities-and-sinners\\packs\\ddb-cities-and-sinners-feats.db"
+    },
+    {
+      "label": "DDB Class Features",
+      "name": "ddb-cities-and-sinners-class-features",
+      "package": "world",
+      "type": "Item",
+      "path": "packs/ddb-cities-and-sinners-class-features.db",
+      "system": "dnd5e",
+      "entity": "Item",
+      "private": false,
+      "absPath": "C:\\Users\\lucas\\AppData\\Local\\FoundryVTT\\Data\\worlds\\cities-and-sinners\\packs\\ddb-cities-and-sinners-class-features.db"
+    },
+    {
+      "label": "DDB Classes",
+      "name": "ddb-cities-and-sinners-classes",
+      "package": "world",
+      "type": "Item",
+      "path": "packs/ddb-cities-and-sinners-classes.db",
+      "system": "dnd5e",
+      "entity": "Item",
+      "private": false,
+      "absPath": "C:\\Users\\lucas\\AppData\\Local\\FoundryVTT\\Data\\worlds\\cities-and-sinners\\packs\\ddb-cities-and-sinners-classes.db"
+    },
+    {
+      "label": "DDB Racial Traits",
+      "name": "ddb-cities-and-sinners-racial-traits",
+      "package": "world",
+      "type": "Item",
+      "path": "packs/ddb-cities-and-sinners-racial-traits.db",
+      "system": "dnd5e",
+      "entity": "Item",
+      "private": false,
+      "absPath": "C:\\Users\\lucas\\AppData\\Local\\FoundryVTT\\Data\\worlds\\cities-and-sinners\\packs\\ddb-cities-and-sinners-racial-traits.db"
+    },
+    {
+      "label": "DDB Races",
+      "name": "ddb-cities-and-sinners-races",
+      "package": "world",
+      "type": "Item",
+      "path": "packs/ddb-cities-and-sinners-races.db",
+      "system": "dnd5e",
+      "entity": "Item",
+      "private": false,
+      "absPath": "C:\\Users\\lucas\\AppData\\Local\\FoundryVTT\\Data\\worlds\\cities-and-sinners\\packs\\ddb-cities-and-sinners-races.db"
+    },
+    {
+      "label": "DDB Override",
+      "name": "ddb-cities-and-sinners-override",
+      "package": "world",
+      "type": "Item",
+      "path": "packs/ddb-cities-and-sinners-override.db",
+      "system": "dnd5e",
+      "entity": "Item",
+      "private": false,
+      "absPath": "C:\\Users\\lucas\\AppData\\Local\\FoundryVTT\\Data\\worlds\\cities-and-sinners\\packs\\ddb-cities-and-sinners-override.db"
+    },
+    {
+      "label": "DDB Tables",
+      "name": "ddb-cities-and-sinners-tables",
+      "package": "world",
+      "type": "RollTable",
+      "path": "packs/ddb-cities-and-sinners-tables.db",
+      "system": "dnd5e",
+      "entity": "RollTable",
+      "private": false
+    }
+  ],
+  "system": "dnd5e",
+  "dependencies": [],
+  "socket": false,
+  "protected": false,
+  "background": "Fantasy%20Assassin.jpg",
+  "coreVersion": "9.255",
+  "nextSession": "2022-01-20T19:00:00.000Z",
+  "resetKeys": false,
+  "safeMode": false,
+  "systemVersion": "1.5.6"
+}
